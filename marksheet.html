@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/marksheet.css">
+</head>
+
+<body>
+    <h1>Mark Sheet</h1>
+    <form action="post">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name"><br>
+        <label for="maths">Maths : </label>
+        <input type="number" name="maths" id="maths"><br>
+        <label for="science">Science : </label>
+        <input type="number" name="science" id="science"><br>
+        <label for="english">English : </label>
+        <input type="number" name="english" id="english"><br>
+        <input type="button" value="Submit" onclick="calculateGrade()">
+    </form>
+    <div id="result"></div>
+    <script src="./js/marksheet.js"></script>
+</body>
+
+</html>
