@@ -4,7 +4,7 @@ const weightInput = document.getElementById("weight");
 const heightInput = document.getElementById("height");
 const resultSpan = document.getElementById("result");
 
-calculateButton.addEventListener("click", function () {
+calculateButton.addEventListener("result", function () {
     const weight = parseFloat(weightInput.value);
     const height = parseFloat(heightInput.value);
     const bmi = weight / (height * height);
