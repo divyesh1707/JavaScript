@@ -17,6 +17,7 @@ span {
     background-color: blueviolet;
     margin: 0 auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
 }
 .data {
     padding-top: 25px;
@@ -35,5 +36,27 @@ button {
 body{
     color: white;
     font-family: sans-serif;
-
+    background-color: black;
+}
+#Total_Bill{
+    margin-left: 75px;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    font-weight: 500;
+}
+#Tip_Amount{
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+#Bill_Amount{
+    margin-left: 30px;
+    text-align: center;
+    border-radius: 5px;
+}
+#Per_Tip{
+    text-align: center;
+    border-radius: 5px;
+    margin-left: 5px;
 }

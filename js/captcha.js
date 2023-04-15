@@ -14,6 +14,6 @@ function captchaHandle() {
     if (ans === correctAns) {
         alert("Correct");
     } else {
-        alert("Wrong Correct Ans is").innerHTML = ans;
+        alert("Wrong! Correct Ans is " + ans);
     }
 }
