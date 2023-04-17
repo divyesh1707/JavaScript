@@ -1,14 +1,14 @@
-
 let x = 0;
 
-document.getElementById("x").innerHTML = x;
+function decrement(){
 
-function decrement() {
-    x--;
     document.getElementById("count").innerHTML = x;
+    x--;
 }
 
-function increment() {
-    x++;
+function increment(){
+
     document.getElementById("count").innerHTML = x;
+    x++;
+
 }
