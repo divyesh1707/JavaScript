@@ -1,7 +1,7 @@
 function country() {
-    // let country = document.getElementById("mycontry").value;
+    let country = document.getElementById("mycontry").value;
 
-    document.getElementById("answer").innerHTML = "The Selected Country is " + country;
+    document.getElementById("answer").innerHTML = "The Selected Country is " + country ;
 
     if (country === 'Select') {
         document.body.style.backgroundColor = 'white';
