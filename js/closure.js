@@ -33,14 +33,37 @@
 // res();   //Inner Function Call  //5
 
 
-const handleCounter = () =>{
-    let  count = 0;
-    return function countOp(){
-        count++;
+//outer Function
+// const handleCounter = () =>{
+//     let  count = 0;
+//     return function countOp(){
+//         count++;
+//         console.log(count);
+//     }
+// }
+
+// res = handleCounter()
+// res();
+// res();
+
+
+//outer Function
+const handleCounter = () =>{  //2
+    let count = 0;
+
+    //Inner Function
+
+    return function operation(){  //3
+        count = count +1;
         console.log(count);
-    }
+    };
 }
 
-res = handleCounter()
+let res = handleCounter();  //1  //4
 res();
 res();
+res();
+
+let res1 = handleCounter();
+res1();
+res1();

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Lato&family=Noto+Sans&family=Poppins:wght@600&family=Roboto:wght@400;700&family=Unbounded:wght@300&display=swap');
+
+    body {
+        font-family: sans-serif;
+        color: white;
+        background-image: url(./img/abstract-dark-blue-futuristic-digital-grid-background.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    input {
+        outline: none;
+    }
+
+    input:focus {
+        border-color: blue;
+    }
+
+    input {
+        border-radius: 5px;
+        height: 22px;
+        padding-left: 5px;
+    }
+
+    .reg-container {
+        padding-top: 25px;
+        text-align: center;
+        margin-top: 200px;
+        margin-left: 580px;
+        height: 300px;
+        width: 350px;
+        background: rgb(238, 174, 202);
+        background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(148, 165, 233, 0.726015406162465) 99%);
+        border-radius: 10px;
+        box-shadow: 13px -7px 20px -3px rgba(0, 0, 0, 0.59);
+        -webkit-box-shadow: 13px -7px 20px -3px rgba(0, 0, 0, 0.59);
+        -moz-box-shadow: 13px -7px 20px -3px rgba(0, 0, 0, 0.59);
+        border-radius: 120px 30px 120px 30px;
+        -moz-border-radius: 120px 30px 120px 30px;
+        -webkit-border-radius: 120px 30px 120px 30px;
+        border: 0px dotted #000000;
+    }
+
+    h1 {
+        color: black;
+        font-family: 'Roboto', sans-serif;
+        font-family: 'Unbounded', cursive;
+    }
+
+    button {
+        padding: 10px 30px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 700;
+        background-color: yellowgreen;
+        font-size: 15px;
+    }
+
+    #email {
+        margin-right: 12px;
+    }
+
+    #ErrorMsg {
+        color: red;
+    }
+
+    #ErrorP {
+        color: red;
+    }
+</style>
+
+<body>
+    <div class="reg-container">
+        <h1>User Login</h1>
+        <form action="#" method="post">
+
+            Email ID : <input type="email-id" name="email" value="" id="email" placeholder="Enter Email ID"><br><br>
+
+            <span id="ErrorMsg"></span><br><br>
+
+            Password : <input type="password" name="password" value="" id="password" placeholder="Enter Password">
+            <i class="fa-solid fa-eye" onclick="pass_show()"></i><br><br>
+
+            <span id="ErrorP"></span><br>
+
+            <button>Login</button>
+        </form>
+    </div>
+
+    <script src="./js/validation_form.js"></script>
+</body>
+
+</html>
