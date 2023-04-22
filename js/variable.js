@@ -3,10 +3,10 @@
 
 // var x=10;
 // var X=20;
-// console.log(X);
+// console.log(X);   //20
 
 // var x;
-// console.log(x);
+// console.log(x);     //undefined
 
 // var x=10;
 // {
@@ -14,7 +14,7 @@
 
 //     //Block Scope or local scope
 // }
-// console.log(x);
+// console.log(x);   //20
 
 
              // let//
@@ -38,22 +38,21 @@
 // console.log(x);    //12
 
 
-           // const // 
+        //    const // 
 
+const x=10;
+x=x+2;
+console.log(x);   //eror
 
-// const x=10;
-// x=x+2;
-// console.log(x);   //eror
+const x;
+x=10;
+console.log(x);     //error
 
-// const x;
-// x=10;
-// console.log(x);     //error
-
-// const x=10;
-// {
-//     const x=20;
-// }
-// console.log(x);   //10
+const x=10;
+{
+    const x=20;
+}
+console.log(x);   //10
 
 
 

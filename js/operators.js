@@ -1,3 +1,5 @@
+                    // Arithmetic Operetor
+
 // let x = parseInt(prompt("Pls Enter value of x:"));
 // let y = parseInt(prompt("Pls Enter value of y:"));
 
@@ -61,7 +63,7 @@
 
 // let x=15, y=10;
 
-// console.log(x>y); 
+// console.log(x>y);        //True
 
 
 
@@ -69,34 +71,34 @@
 
 // let x=5, y=5;
 
-// x<=y && x==y ? console.log("True") : console.log("False");
+// x<=y && x==y ? console.log("True") : console.log("False");   //True
 
 
 // let x=4, y=5;
 
-// x<=y || x==y ? console.log("True") : console.log("False");
+// x<=y || x==y ? console.log("True") : console.log("False");    // True
 
 
-// let x=4, y=5;
+// let x=5, y=5;
 
-// x!=y ? console.log("True") : console.log("False");
+// x!=y ? console.log("True") : console.log("False");     // False
 
 
                     // Type Operator //
 
 // let x="10";
 
-// console.log(typeof("x"));
+// console.log(typeof("x"));    //string
 
 
 // let x=10;
 
-// console.log(typeof(x));
+// console.log(typeof(x));    //Number
 
 
-let x;
+// let x;
 
-console.log(typeof(x));
+// console.log(typeof(x));      //undefined
 
  
 

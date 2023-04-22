@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Scolarship Calculator</h1>
+
+    <form action="#" method="post">
+        Enter Your Fess : <input type="number" name="fess" id="fess" placeholder="Enter Your Fees"><br><br>
+
+        Enter Your CGPA : <input type="number" name="CGPA" id="CGPA" placeholder="CGPA"><br><br>
+
+        Select Your Cast : <select name="" id="cast">
+            <option value="">--Select Your Cast---</option>
+            <option value="open">OPEN</option>
+            <option value="sc">SC</option>
+            <option value="st">ST</option>
+            <option value="obc">OBC</option>
+        </select><br><br>
+
+        <button type="button" id="calculate" onclick="calculate_Scolarship()">Submit</button>
+        <div class="result">
+            <p> <span id="Fees"></span> </p>
+            <p> <span id="Grade"></span> </p>
+            <p> <span id="Scolarship"></span> </p>
+            <p><span id="Pay_fees"></span> </p>
+        </div>
+
+        <p id="msg"></p>
+
+    </form>
+
+
+
+
+
+
+
+
+
+
+    <script src="./js/Cal_Scolarship.js"></script>
+
+</body>
+
+</html>

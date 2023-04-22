@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Book Appointment (Dental Treatment)</h1>
+    <form onsubmit="Appo_Date()" action="#" method="post">
+        <select name="treat" id="treat" onchange="change()">
+            <option value="st">--Select Treatment--</option>
+            <option value="tc">Teeth Cleanings</option>
+            <option value="fs">Fillings</option>
+            <option value="rct">Root Canal Treatment</option>
+            <option value="rc">RCT + Cover</option>
+            <option value="bi">Braces/Invisalign</option>
+        </select><br><br>
+
+        <table border="1" id="table">
+            <tr id="show">
+                <th>Treatment</th>
+                <th>Seating</th>
+                <th>Costing</th>
+            </tr>
+            <td id="ans"></td>
+            <td id="seat"></td>
+            <td id="cost"></td>
+        </table><br><br>
+
+        <p id="print"></p>
+
+        <input type="Submit" value="Submit Treatment" name="" id="submit_treat">
+
+    </form><br>
+
+    Select Appointment Date : <input type="date" name="date" id="App_Date" placeholder=""><br><br>
+
+    <form onsubmit="Appo_Booked()" action="" method="post">
+        <input type="submit" value="Book Appointment" name="" id="Book_Appo">
+    </form>
+
+    <script src="./js/Dental_Treatment.js"></script>
+</body>
+
+</html>
