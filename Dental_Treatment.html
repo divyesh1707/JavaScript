@@ -8,10 +8,29 @@
     <title>Document</title>
 </head>
 
+<style>
+    #table {
+        display: none;
+    }
+
+    #sad {
+        display: none;
+    }
+
+    #submit_treat {
+        display: none;
+    }
+
+    #treatment_schdule, #show1, #show2, #show3, #show4, #show5, #show6, #show7, #show8, #show9, #show10, #show11, #show12  {
+        display: none;
+    }
+</style>
+
 <body>
 
     <h1>Book Appointment (Dental Treatment)</h1>
-    <form onsubmit="Appo_Date()" action="#" method="post">
+    <!-- <form onsubmit="Appo_Date()" action="#" method="post"> -->
+    <form>
         <select name="treat" id="treat" onchange="change()">
             <option value="st">--Select Treatment--</option>
             <option value="tc">Teeth Cleanings</option>
@@ -27,22 +46,93 @@
                 <th>Seating</th>
                 <th>Costing</th>
             </tr>
-            <td id="ans"></td>
-            <td id="seat"></td>
-            <td id="cost"></td>
+            <tr>
+                <td id="ans"></td>
+                <td id="seat"></td>
+                <td id="cost"></td>
+            </tr>
+            
         </table><br><br>
 
         <p id="print"></p>
 
-        <input type="Submit" value="Submit Treatment" name="" id="submit_treat">
+        <input onclick="bookapp()" type="button" value="Submit Treatment" name="" id="submit_treat"><br><br>
 
+        <div id="sad">
+            Select Appointment Date : <input type="date" name="date" id="App_Date" placeholder=""><br><br>
+
+            <input onclick="Appo_Booked()" type="button" value="Book Appointment" name="" id="Book_Appo"><br><br>
+        </div>
+        <div id="treatment_div">
+            <table border="1" id="treatment_schdule">
+                <tr>
+                    <th>SR</th>
+                    <th>Appointment Date</th>
+                    <th>Payable Amount</th>
+                </tr>
+                <tr id="show1">
+                    <th id="sr1"></th>
+                    <th id="ad1"></th>
+                    <th id="pa1"></th>
+                </tr>
+                <tr id="show2">
+                    <th id="sr2"></th>
+                    <th id="ad2"></th>
+                    <th id="pa2"></th>
+                </tr>
+                <tr id="show3">
+                    <th id="sr3"></th>
+                    <th id="ad3"></th>
+                    <th id="pa3"></th>
+                </tr>
+                <tr id="show4">
+                    <th id="sr4"></th>
+                    <th id="ad4"></th>
+                    <th id="pa4"></th>
+                </tr>
+                <tr id="show5">
+                    <th id="sr5"></th>
+                    <th id="ad5"></th>
+                    <th id="pa5"></th>
+                </tr>
+                <tr id="show6">
+                    <th id="sr6"></th>
+                    <th id="ad6"></th>
+                    <th id="pa6"></th>
+                </tr>
+                <tr id="show7">
+                    <th id="sr7"></th>
+                    <th id="ad7"></th>
+                    <th id="pa7"></th>
+                </tr>
+                <tr id="show8">
+                    <th id="sr8"></th>
+                    <th id="ad8"></th>
+                    <th id="pa8"></th>
+                </tr>
+                <tr id="show9">
+                    <th id="sr9"></th>
+                    <th id="ad9"></th>
+                    <th id="pa9"></th>
+                </tr>
+                <tr id="show10">
+                    <th id="sr10"></th>
+                    <th id="ad10"></th>
+                    <th id="pa10"></th>
+                </tr>
+                <tr id="show11">
+                    <th id="sr11"></th>
+                    <th id="ad11"></th>
+                    <th id="pa11"></th>
+                </tr>
+                <tr id="show12">
+                    <th id="sr12"></th>
+                    <th id="ad12"></th>
+                    <th id="pa12"></th>
+                </tr>
+            </table>
+        </div>
     </form><br>
-
-    Select Appointment Date : <input type="date" name="date" id="App_Date" placeholder=""><br><br>
-
-    <form onsubmit="Appo_Booked()" action="" method="post">
-        <input type="submit" value="Book Appointment" name="" id="Book_Appo">
-    </form>
 
     <script src="./js/Dental_Treatment.js"></script>
 </body>

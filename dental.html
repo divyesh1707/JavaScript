@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    #place,
+    #tr-plan {
+        display: none;
+    }
+</style>
+
+<body>
+    <h1>Dental Treatment</h1>
+    <select name="treatment" id="treatment" onchange="handleTreatment()">
+        <option value="0">--Select Treatment--</option>
+        <option value="tc">Teeth Cleanings</option>
+        <option value="fl">Fillings</option>
+        <option value="rct">Root Canal Treatment</option>
+        <option value="rctc">RCT + Cover</option>
+        <option value="brc">Braces/Invisalign</option>
+    </select><br><br>
+    <div id="place">
+        <table border="1">
+            <tr>
+                <th>Treatment</th>
+                <th>Seating</th>
+                <th>Costing</th>
+            </tr>
+            <tr>
+                <td id="treat"></td>
+                <td id="seating"></td>
+                <td id="costing"></td>
+            </tr>
+        </table><br>
+
+        Select Appointment Date : <input type="date" id="date"><br><br>
+
+        <input type="button" value="Book Appointment" name="" id="bookapp">
+    </div><br>
+
+    <div id="tr-plan"></div>
+
+    <script src="./js/dental.js"></script>
+</body>
+
+</html>
