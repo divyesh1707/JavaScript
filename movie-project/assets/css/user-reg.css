@@ -1,0 +1,21 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.user-reg{
+ height: 250px;
+ width: 350px;
+ border: 2px solid black;
+ margin-top: 200px;
+ margin-left: 500px;
+}
+#user-reg{
+    margin-left: 75px;
+}
+h1{
+    text-align: center;
+}
+button{
+    justify-content: center;
+}

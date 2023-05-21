@@ -4,20 +4,23 @@ let arr = [];
 
 let update = false;
 
-
-
 let uid = null;
 
 const handleInsert = () => {
 
     let val = document.getElementById("data").value;
 
-    console.log(val);
+    let localData = JSON.parse(localStorage.getItem("todo"));
 
-    arr.push(val);
-    localStorage.setItem("todo", JSON.stringify(arr));
+    // document.getElementById("todo-form").value = '';
 
-    console.log(arr);
+    if (localData) {
+        localData.push(val);
+        localStorage.setItem("todo", JSON.stringify(localData));
+    } else {
+        arr.push(val);
+        localStorage.setItem("todo", JSON.stringify(arr));
+    }
 
     dispRemove();
 
@@ -29,22 +32,30 @@ const handleInsert = () => {
 
 
 const dispRemove = () => {
-    let print = '<ul>'
-    let data = JSON.parse(localStorage.getItem("todo"))
-    data.map((t, i) => {
-        print += '<li>' + t + '<button onclick = handleRemove(' + i + ')>X</button> ' + '<button onclick = handleUpdate(' + i + ')>Update</button>' + '</li>'
-    })
+    let localData =JSON.parse(localStorage.getItem('todo'));
+    console.log(localData);
 
-    print += '</ul>'
+    if (localData) {
+        let print = '<ul>';
+        let data = JSON.parse(localStorage.getItem("todo"))
+        data.map((t, i) => {
+            print += '<li>' + t + '<button onclick = handleRemove(' + i + ')>X</button> ' + '<button onclick = handleUpdate(' + i + ')>Update</button>' + '</li>'
+        })
 
-    document.getElementById('ans').innerHTML = print;
+        print += '</ul>';
 
+        document.getElementById('ans').innerHTML = print;
+
+    }
+    
 }
 
 const handleRemove = (i) => {
-    localStorage.setItem("todo", JSON.stringify(arr));
+    let localData = JSON.parse(localStorage.getItem("todo"));
+
     console.log(i);
-    arr.splice(i, 1);
+    localData.splice(i, 1);
+    localStorage.setItem("todo", JSON.stringify(localData));
     console.log(arr);
 
     dispRemove();
@@ -53,10 +64,13 @@ const handleRemove = (i) => {
 
 const handleUpdate = (i) => {
     update = true;
+
+    let localData = JSON.parse(localStorage.getItem('todo'));
+    console.log(localData[i]);
     uid = i;
     console.log(arr[i]);
 
-    document.getElementById("data").value = arr[i];
+    document.getElementById("data").value = localData[i];
 
 }
 
@@ -70,12 +84,13 @@ const handleDes = (i) => {
 
 const handleUpdateData = () => {
     console.log("Update call");
+    let localData = JSON.parse(localStorage.getItem('todo'));
 
     let newval = document.getElementById("data").value;
     console.log(newval);
 
-    arr[uid] = newval;
-    localStorage.setItem("todo", JSON.stringify(arr));
+    localData[uid] = newval;
+    localStorage.setItem("todo", JSON.stringify(localData));
 
     dispRemove();
 

@@ -1,0 +1,44 @@
+#main{
+
+    display: flex;
+}
+
+#option{
+    height: 600px;
+    width: 150px;
+    border: 2px solid #000;
+    font-size: 20px;
+}
+
+
+h3{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #000;
+}
+
+.main-data{
+    height: 600px;
+    width: 1000px;
+    margin-left: 20px;
+    border: 2px solid #000;
+}
+
+#data {
+    /* display: none; */
+    width: 200px;
+    height: 300px;
+    margin: 30px;
+}
+
+
+#cinema , #movie{
+    width: 150px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+#table{
+    display: none;
+}
+
