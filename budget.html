@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#" method="post" id="budget-form">
+
+        <input type="text" name="budget" id="budget" placeholder="Budget">
+
+        <input type="submit">
+
+    </form>
+
+    <div class="dispalyData">
+        <div id="budget-div">
+            <span>Budget</span>
+        </div>
+
+        <div id="expense-div">
+            <span>Expense</span>
+            <p id="exp-val"></p>
+        </div>
+
+        <div id="balance-div">
+            <span>Balance</span>
+            <p id="bal-val"></p>
+        </div>
+    </div><br><br><br>
+
+    <form action="#" method="post" id="exp-form">
+
+        <input type="text" name="exp-name" id="exp-name" placeholder="Expence Name"><br><br>
+
+        <input type="text" name="exp-amount" id="exp-amount" placeholder="Expense Amount"><br><br>
+
+        <input type="submit">
+    </form> <br>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Expense Name</th>
+                <th>Expense Amount</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="tbody-exp">
+
+        </tbody>
+    </table>
+
+    <script src="./js/budget.js"></script>
+</body>
+
+</html>
