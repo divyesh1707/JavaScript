@@ -1,5 +1,4 @@
 function validateForm() {
-    console.log('dhdhd');
 
     let nameVal = document.contactForm.name.value;
     let emailVal = document.contactForm.email.value;
@@ -12,20 +11,52 @@ function validateForm() {
     if (nameVal === '') {
         document.getElementById("nameErr").innerHTML = 'Pls Enter Name';
     } else {
-        document.getElementById("nameErr").innerHTML = '';
+        const nameRegex = /^[a-zA-Z\s]+$/;
+
+        if (nameRegex.test(nameVal)) {
+            document.getElementById("nameErr").innerHTML = '';
+        } else {
+            document.getElementById("nameErr").innerHTML = 'Pls Enter Valid Name';
+        }
     }
 
     if (emailVal === '') {
-        document.getElementById("emailErr").innerHTML = 'Pls Enter Valid Email Id';
+        document.getElementById("emailErr").innerHTML = 'Pls Enter Email Id';
     } else {
-        document.getElementById("emailErr").innerHTML = '';
+        const emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+
+        if (emailRegex.test(emailVal)) {
+            document.getElementById("emailErr").innerHTML = '';
+        } else {
+            document.getElementById("emailErr").innerHTML = 'Pls Enter Valid Email Id';
+        }
     }
 
     if (mobVal === '') {
-        document.getElementById("mobileErr").innerHTML = 'Pls Enter Valid Mob No';
+        document.getElementById("mobileErr").innerHTML = "please enter mobile No."
     } else {
-        document.getElementById("mobileErr").innerHTML = '';
+
+        const mobregex = /^\d{10}$/;
+
+        if (mobregex.test(mobVal)) {
+            document.getElementById("mobileErr").innerHTML = "";
+        } else {
+            document.getElementById("mobileErr").innerHTML = "please enter valid mobile No."
+        }
+
     }
+
+    // if (mobVal === '') {
+    //     document.getElementById("mobileErr").innerHTML = 'Pls Enter Mob No';
+    // } else {
+    //     const mobregex = /^(\+91|0)?[6789]\d{9}$/;
+
+    //     if (mobregex.test(mobVal)) {
+    //         document.getElementById("mobileErr").innerHTML = '';
+    //     } else {
+    //         document.getElementById("mobileErr").innerHTML = 'Pls Enter Mob No';
+    //     }
+    // }
 
     if (countryVal === '0') {
         document.getElementById("countryErr").innerHTML = 'Pls Select Country';
