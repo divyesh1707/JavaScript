@@ -48,22 +48,22 @@
 
 
 //outer Function
-const handleCounter = () =>{  //2
-    let count = 0;
+// const handleCounter = () =>{  //2
+//     let count = 0;
 
-    //Inner Function
+//     //Inner Function
 
-    return function operation(){  //3
-        count = count +1;
-        console.log(count);
-    };
-}
+//     return function operation(){  //3
+//         count = count +1;
+//         console.log(count);
+//     };
+// }
 
-let res = handleCounter();  //1  //4
-res();
-res();
-res();
+// let res = handleCounter();  //1  //4
+// res();
+// res();
+// res();
 
-let res1 = handleCounter();
-res1();
-res1();
+// let res1 = handleCounter();
+// res1();
+// res1();

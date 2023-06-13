@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p {
+            color: blue;
+        }
+        .error{
+            color: red;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form name="registration" onsubmit="return regForm()" action="#" method="post">
+        <h2>Registration Form</h2>
+
+        <p>Age</p><input type="text" name="age" id="age">
+        <span class="error" id="ageErr"></span>
+
+        <p>Address</p><input type="text" name="address" id="address">
+        <span class="error" id="addressErr"></span>
+
+        <p>Date of Birth</p><input type="date" name="dob" id="dob">
+        <span class="error" id="dobErr"></span>
+
+        <p>Hobby</p><input type="checkbox" name="hobby" value="music"> Music <br>
+        <input type="checkbox" name="hobby" value="cricket"> Cricket <br>
+        <input type="checkbox" name="hobby" value="reading">Reading <br><br><br>
+        <span class="error" id="hobbyErr"></span><br>
+
+        <input type="checkbox" name="check" value="check">
+        <span>Terms & Condition</span><br><br>
+        <span class="error" id="checkErr"></span>
+        
+        <input type="submit" value="Submit"><br><br>
+    </form>
+
+    <script src="./js/formValidation.js"></script>
+</body>
+
+</html>

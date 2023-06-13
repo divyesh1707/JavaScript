@@ -6,16 +6,12 @@ class validation {
         this.countryVal = c;
         this.genderVal = g;
         this.hobbyVal = h;
-
-
     }
     printErr = (id, msg) => {
         document.getElementById(id).innerHTML = msg;
     }
 
     checkvalidation() {
-
-      
 
         // console.log(hobbyVal[0].value);
 
@@ -25,7 +21,6 @@ class validation {
         let countryErr = true;
         let genderErr = true;
         let hobbyErr = true;
-
 
         let temp = [];
 
